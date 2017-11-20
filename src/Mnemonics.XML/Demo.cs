@@ -1,28 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Globalization;
-using System.IO;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace Mnemonics.XML
 {
-    public class MyPoco
+    public class Poco
     {
-        public int Id { get; }
-        public double CreatedAt { get; }
-        public string Name { get; private set; }
+        private readonly IEnumerable<Poco> _myPocos;
 
-        
-        public bool UpdateName(string value)
+        public Poco(IEnumerable<Poco> myPocos)
         {
-            if (value != null)
-            {
-                Name = value;
-                return true;
-            }
-
-            return false;
+            _myPocos = myPocos ?? throw new ArgumentNullException(nameof(myPocos));
         }
+
+        private Task<IEnumerable<string>> _strings;
+
     }
 }

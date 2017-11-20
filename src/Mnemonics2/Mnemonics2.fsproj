@@ -59,6 +59,8 @@
     <Compile Include="Types.fs" />
     <Compile Include="Methods.fs" />
     <Compile Include="Structures.fs" />
+    <Compile Include="Properties.fs" />
+    <Compile Include="Fields.fs" />
     <Compile Include="Export.fs" />
     <Compile Include="Program.fs" />
     <None Include="App.config" />
