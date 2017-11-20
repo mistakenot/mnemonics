@@ -133,6 +133,26 @@ let renderReSharper() =
       for (gk,gv,genArgCount) in dotNetGenericTypes do
         match genArgCount with
         | 1 ->
+          // We're also going to add the case of wanting the type parameter to be left empty so that you can use a custom type
+          let t0 = new TemplatesExportTemplate(shortcut=s+gk)
+          let vars0 = new List<TemplatesExportTemplateVariable>()
+          let genericArgs = gv + "<T>"
+          let defValue = "new " + genericArgs + "()"
+          t0.description <- (printExpressions doc vars0 defValue).Replace("$typename$", genericArgs)
+          t0.reformat <- "True"
+          t0.shortenQualifiedReferences <- "True"
+          // Replace the fixed type with a constant
+          let rec replace = function
+            | FixedType :: tail -> Text (gv + "<") :: Constant ("type", "T") :: Text ">" :: replace tail
+            | x::tail -> x :: replace tail
+            | [] -> []
+          let newExpr = replace exprs
+          t0.text <- (printExpressions newExpr vars0 defValue)
+            .Replace("$typename$", genericArgs)
+          t0.uid <- newGuid()
+          t0.Context <- new TemplatesExportTemplateContext(CSharpContext = csContext)
+          t0.Variables <- vars0.ToArray()
+          templates.Add t0
           for (tk,tv,_) in csharpTypes do
             let t0 = new TemplatesExportTemplate(shortcut=s+gk+tk)
             let vars0 = new List<TemplatesExportTemplateVariable>()

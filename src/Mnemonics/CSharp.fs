@@ -200,8 +200,9 @@ let cSharpMemberTemplates =
         FixedType
       ],
       [
-        Text "public async "
+        Text "public async System.Threading.Tasks.Task<"
         FixedType
+        Text ">"
         space
         Constant ("methodname", "MyMethod")
         Text "()"

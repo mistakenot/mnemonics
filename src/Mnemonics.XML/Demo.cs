@@ -32,24 +32,4 @@ namespace Mnemonics.XML
             return false;
         }
     }
-
-
-
-
-
-
-
-    public static class MyPocoExtensions
-    {
-        public static async Task<string> Write(this MyPoco val, string location)
-        {
-            var json = JsonConvert.SerializeObject(val);
-
-            using (var fs = new FileStream(location, FileMode.Create))
-            using (var writer = new StreamWriter(fs))
-            {
-                await writer.WriteAsync(json);
-            }
-        }
-    }
 }
