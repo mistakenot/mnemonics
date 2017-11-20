@@ -4,8 +4,9 @@ open Types
 
 let dotNetGenericTypes =
   [
-    ("l.", "System.Collections.Generic.List", 1)
-    ("h.",  "System.Collections.Generic.HashSet", 1)
+    ("L", "System.Collections.Generic.List", 1)
+    ("H",  "System.Collections.Generic.HashSet", 1)
+    ("T", "System.Threading.Tasks.Task", 1)
     (*"di.", "System.Collections.Generic.Dictionary", 2*)
-    ("~",  "System.Collections.Generic.IEnumerable", 1)
+    ("E",  "System.Collections.Generic.IEnumerable", 1)
   ]

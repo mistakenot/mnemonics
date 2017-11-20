@@ -8,7 +8,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 // 
@@ -229,9 +231,9 @@ public partial class TemplatesExportTemplateContext {
 public partial class TemplatesExportTemplateContextCSharpContext {
     
     private string contextField;
-    
+
     private decimal minimumLanguageVersionField;
-    
+
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
     public string context {

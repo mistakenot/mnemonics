@@ -8,6 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
 using System.Xml.Serialization;
 
 // 
@@ -188,7 +192,7 @@ public partial class templateSetTemplateVariable {
             this.expressionField = value;
         }
     }
-    
+
     /// <remarks/>
     [System.Xml.Serialization.XmlAttributeAttribute()]
     public string defaultValue {

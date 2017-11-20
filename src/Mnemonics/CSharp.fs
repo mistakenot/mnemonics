@@ -194,6 +194,23 @@ let cSharpMemberTemplates =
       ]
     )
     (
+      "ma",
+      [
+        Text "An async method that returns a(n) "
+        FixedType
+      ],
+      [
+        Text "public async "
+        FixedType
+        space
+        Constant ("methodname", "MyMethod")
+        Text "()"
+        Scope [
+          endConstant
+        ]
+      ]
+    )
+    (
       "M",
       [
         Text "A static method that returns a(n) "
@@ -205,6 +222,67 @@ let cSharpMemberTemplates =
         space
         Constant ("methodname", "MyMethod")
         Text "()"
+        Scope [
+          endConstant
+        ]
+      ]
+    )
+    (
+      "Ma",
+      [
+        Text "An async static method that returns a(n) "
+        FixedType
+      ],
+      [
+        Text "public static async System.Threading.Tasks.Task<"
+        FixedType
+        Text ">"
+        space
+        Constant ("methodname", "MyMethod")
+        Text "()"
+        Scope [
+          endConstant
+        ]
+      ]
+    )
+    (
+      "X",
+      [
+        Text "An extension method that returns a(n) "
+        FixedType
+      ],
+      [
+        Text "public static "
+        FixedType
+        space
+        Constant ("methodname", "MyMethod")
+        Text "(this "
+        Constant ("parametertype", "PTYPE")
+        space
+        Text "val"
+        Text ")"
+        Scope [
+          endConstant
+        ]
+      ]
+    )
+    (
+      "Xa",
+      [
+        Text "An async extension method that returns a(n) "
+        FixedType
+      ],
+      [
+        Text "public static async System.Threading.Tasks.Task<"
+        FixedType
+        Text ">"
+        space
+        Constant ("methodname", "MyMethod")
+        Text "(this "
+        Constant ("parametertype", "PTYPE")
+        space
+        Text "val"
+        Text ")"
         Scope [
           endConstant
         ]
