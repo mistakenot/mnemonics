@@ -12,7 +12,6 @@ let syst (s,t,d) = {Symbol = s; Type = [Text t]; Default = [Text d]}
 // Most commonly used system types
 let systemTypes = [
     ("b", "bool", "false")
-    ("c", "char", "0")
     ("f", "float", "0.0f")
     ("by", "byte", "0")
     ("i", "int", "0")

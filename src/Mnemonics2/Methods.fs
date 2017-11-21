@@ -20,7 +20,7 @@ let returnModes = [SyncVoid; SyncResult; AsyncVoid; AsyncResult]
 let returnModeTemplate = function
     | SyncVoid -> [Constant ("TYPE", "void")]
     | SyncResult -> [FixedType]
-    | AsyncVoid -> [Text "async"; space; Constant ("TYPE", "Task")]
+    | AsyncVoid -> [Text "async"; space; Text "Task"]
     | AsyncResult -> [Text "async Task<"; FixedType; Text ">"]
 
 let template methodMode returnMode = 
