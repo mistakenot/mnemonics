@@ -1,4 +1,3 @@
-[![official JetBrains project](http://jb.gg/badges/official-flat-square.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 Please note that this is not the original jetbrains project. To install the updated C# templates, please use the file `downloads\CSharpMnemonics.xml`. A guide to the updated version can be found [here](http://blog.dotnetcoreready.com/2017/11/19/mnemomics2.html). The original instructions are included below.
 
 Mnemonics
