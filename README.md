@@ -1,4 +1,4 @@
-Please note that this is not the original jetbrains project. To install the updated C# templates, please use the file `downloads\CSharpMnemonics.xml`. A guide to the updated version can be found [here](http://blog.dotnetcoreready.com/2017/11/19/mnemomics2.html). The original instructions are included below.
+Please note that this is not the original jetbrains project. To install the updated C# templates, please use the file `downloads\CSharpMnemonics.xml`. A guide to the updated version can be found [here](https://charliedaly.co.uk/code/2017/intellisense-mnemomic-shortcuts). The original instructions are included below.
 
 Mnemonics
 =========
